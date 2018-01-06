@@ -8,7 +8,7 @@ all: clean native
 	mv *.bin ../bin
 	cp -a *.pl ../bin
 
-release: native
+release: native windows
 	$(STRIP_NATIVE) *.bin
 	$(STRIP_WINDOWS) *.exe
 	mv *.bin ../bin
