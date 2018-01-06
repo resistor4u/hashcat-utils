@@ -5,8 +5,10 @@
 CFLAGS += -Wall -W -pipe -O2 -std=gnu99
 
 all: clean native
+	mv *.bin ../bin
+	cp -a *.pl ../bin
 
-release: native windows
+release: native
 	$(STRIP_NATIVE) *.bin
 	$(STRIP_WINDOWS) *.exe
 	mv *.bin ../bin
